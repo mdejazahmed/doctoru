@@ -1,0 +1,1472 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=League+Spartan:wght@100;300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  visibility: hidden;
+}
+
+.theme-light .login {
+  width: 100%;
+  background-color: #ececec;
+}
+.theme-light .login .wrapper {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 1284px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 157px 84px;
+}
+.theme-light .login .wrapper .left {
+  flex: 1;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 2px 20px -2px rgba(0, 0, 0, 0.25);
+  background-color: #e1e1e1;
+}
+.theme-light .login .wrapper .left h1 {
+  color: #131313;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.theme-light .login .wrapper .left p {
+  color: #131313;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-light .login .wrapper .left form {
+  border-radius: 15px;
+  background: #e0e0e0;
+  box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 20px;
+  margin-top: 23px;
+}
+.theme-light .login .wrapper .left form p {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.theme-light .login .wrapper .left form input {
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 13px 289px 13px 18px;
+  margin-top: 10px;
+}
+.theme-light .login .wrapper .left form button {
+  border-radius: 15px;
+  background: #17a1fa;
+  height: 50px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+.theme-light .login .wrapper .left .bottomPara {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 29px;
+}
+.theme-light .login .wrapper .left .bottomPara.bottomPara2 {
+  margin-top: 10px;
+}
+.theme-light .login .wrapper .left .bottomPara span {
+  color: #17a1fa;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-light .login .wrapper .right {
+  flex: 1;
+  padding: 20px;
+}
+.theme-light .login .wrapper .right img {
+  width: 100%;
+}
+.theme-dark .login {
+  width: 100%;
+  background-color: #1d1d1d;
+}
+.theme-dark .login .wrapper {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 1284px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 157px 84px;
+}
+.theme-dark .login .wrapper .left {
+  flex: 1;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 2px 20px -2px rgba(0, 0, 0, 0.25);
+  background-color: #242424;
+}
+.theme-dark .login .wrapper .left h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.theme-dark .login .wrapper .left p {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-dark .login .wrapper .left form {
+  border-radius: 15px;
+  background: #2c2c2c;
+  box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 20px;
+  margin-top: 23px;
+}
+.theme-dark .login .wrapper .left form p {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.theme-dark .login .wrapper .left form input {
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 13px 289px 13px 18px;
+  margin-top: 10px;
+}
+.theme-dark .login .wrapper .left form button {
+  border-radius: 15px;
+  background: #17a1fa;
+  height: 50px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+.theme-dark .login .wrapper .left .bottomPara {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 29px;
+}
+.theme-dark .login .wrapper .left .bottomPara.bottomPara2 {
+  margin-top: 10px;
+}
+.theme-dark .login .wrapper .left .bottomPara span {
+  color: #17a1fa;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-dark .login .wrapper .right {
+  flex: 1;
+  padding: 20px;
+}
+.theme-dark .login .wrapper .right img {
+  width: 100%;
+}
+
+.theme-light .signup {
+  width: 100%;
+  background-color: #ececec;
+}
+.theme-light .signup .wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 157px 84px;
+}
+.theme-light .signup .wrapper .left {
+  flex: 1;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 2px 20px -2px rgba(0, 0, 0, 0.25);
+  background-color: #e1e1e1;
+}
+.theme-light .signup .wrapper .left h1 {
+  color: #131313;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.theme-light .signup .wrapper .left p {
+  color: #131313;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-light .signup .wrapper .left form {
+  border-radius: 15px;
+  background: #e0e0e0;
+  box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 20px;
+  margin-top: 23px;
+}
+.theme-light .signup .wrapper .left form p {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.theme-light .signup .wrapper .left form input {
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 13px 289px 13px 18px;
+  margin-top: 10px;
+}
+.theme-light .signup .wrapper .left form h3 {
+  color: #ff5858;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 10px;
+}
+.theme-light .signup .wrapper .left form ul {
+  color: #131313;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+}
+.theme-light .signup .wrapper .left form button {
+  border-radius: 15px;
+  background: #17a1fa;
+  height: 50px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+.theme-light .signup .wrapper .left .bottomPara {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 29px;
+}
+.theme-light .signup .wrapper .left .bottomPara.bottomPara2 {
+  margin-top: 10px;
+}
+.theme-light .signup .wrapper .left .bottomPara span {
+  color: #17a1fa;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-light .signup .wrapper .right {
+  flex: 1;
+  padding: 20px;
+}
+.theme-light .signup .wrapper .right img {
+  width: 100%;
+}
+.theme-dark .signup {
+  width: 100%;
+  background-color: #1d1d1d;
+}
+.theme-dark .signup .wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 157px 84px;
+}
+.theme-dark .signup .wrapper .left {
+  flex: 1;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 2px 20px -2px rgba(0, 0, 0, 0.25);
+  background-color: #242424;
+}
+.theme-dark .signup .wrapper .left h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.theme-dark .signup .wrapper .left p {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-dark .signup .wrapper .left form {
+  border-radius: 15px;
+  background: #2c2c2c;
+  box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 20px;
+  margin-top: 23px;
+}
+.theme-dark .signup .wrapper .left form p {
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.theme-dark .signup .wrapper .left form input {
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 13px 289px 13px 18px;
+  margin-top: 10px;
+}
+.theme-dark .signup .wrapper .left form h3 {
+  color: #ff5858;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 10px;
+}
+.theme-dark .signup .wrapper .left form ul {
+  color: #fff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+}
+.theme-dark .signup .wrapper .left form button {
+  border-radius: 15px;
+  background: #17a1fa;
+  height: 50px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+.theme-dark .signup .wrapper .left .bottomPara {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 29px;
+}
+.theme-dark .signup .wrapper .left .bottomPara.bottomPara2 {
+  margin-top: 10px;
+}
+.theme-dark .signup .wrapper .left .bottomPara span {
+  color: #17a1fa;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-dark .signup .wrapper .right {
+  flex: 1;
+  padding: 20px;
+}
+.theme-dark .signup .wrapper .right img {
+  width: 100%;
+}
+
+.theme-light .dashboard {
+  width: 100%;
+}
+.theme-light .dashboard .wrapper {
+  width: 100%;
+  height: 1773px;
+  display: flex;
+}
+.theme-light .dashboard .wrapper .left {
+  min-width: 317px;
+  height: 100vh;
+  background-color: #e1e1e1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.theme-light .dashboard .wrapper .left .profile {
+  height: 319px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.theme-light .dashboard .wrapper .left .profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.theme-light .dashboard .wrapper .left .profile .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theme-light .dashboard .wrapper .left .profile .text p {
+  color: #131313;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .left .profile .text span {
+  color: #131313;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .left .profile button {
+  border-radius: 31px;
+  background: #ccc;
+  color: #131313;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 6px 52px;
+}
+.theme-light .dashboard .wrapper .left nav {
+  height: 100%;
+  overflow-y: scroll;
+}
+.theme-light .dashboard .wrapper .left nav::-webkit-scrollbar {
+  display: none;
+}
+.theme-light .dashboard .wrapper .left nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  gap: 20px;
+}
+.theme-light .dashboard .wrapper .left nav ul .tab {
+  padding: 12px 10px 10px 62px;
+  color: #131313;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+.theme-light .dashboard .wrapper .left nav ul .tab.active {
+  background: #ccc;
+}
+.theme-light .dashboard .wrapper .left nav ul .tab:hover {
+  background: #ccc;
+}
+.theme-light .dashboard .wrapper .main {
+  width: 100%;
+}
+.theme-light .dashboard .wrapper .main .nav {
+  width: 100%;
+  height: 65px;
+  background: #e1e1e1;
+  box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 36px;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+}
+.theme-light .dashboard .wrapper .main .nav .toggle {
+  width: 59px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(23, 161, 250, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+}
+.theme-light .dashboard .wrapper .main .nav .notificationIcon path {
+  fill: #131313;
+}
+.theme-light .dashboard .wrapper .main .content {
+  background: #ececec;
+  width: 100%;
+  height: calc(100% - 65px);
+  padding: 53px 31px;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentLeft {
+  color: #131313;
+  font-family: Inter;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentLeft h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentLeft p {
+  font-size: 24px;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight .days {
+  display: flex;
+  cursor: pointer;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight .days .day {
+  border-radius: 10px 0px 0px 10px;
+  background: #e0e0e0;
+  padding: 12px 10px 7px 10px;
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight .days .day.active, .theme-light .dashboard .wrapper .main .content .contentTop .contentRight .days .day:hover {
+  background: #ccc;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight .days .day:nth-child(2) {
+  border-radius: 0px 10px 10px 0px;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight .date input {
+  border-radius: 10px;
+  background: #e0e0e0;
+  width: 238px;
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 12px 20px;
+}
+.theme-light .dashboard .wrapper .main .content .contentTop .contentRight .date input.darkModeCalender::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid {
+  margin-top: 74px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .contentGridBox {
+  border-radius: 15px;
+  background: #e1e1e1;
+  overflow: hidden;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .contentGridBox .top {
+  height: 66px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .contentGridBox .top svg path {
+  fill: #131313;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .contentGridBox .top span {
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 5px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .contentGridBox .top .refresh {
+  margin-left: auto;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .contentGridBox .bottom {
+  width: 100% !important;
+  height: calc(100% - 66px) !important;
+  background-color: #e0e0e0 !important;
+  padding: 10px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages {
+  width: 55%;
+  height: 683px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .catagoryTabs {
+  height: 41px;
+  display: flex;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .catagoryTabs .catagoryTab {
+  flex: 1;
+  background-color: #b6b6b6;
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage {
+  height: 85%;
+  overflow-y: scroll;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 18px;
+  gap: 10px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .nameandate {
+  display: flex;
+  align-self: flex-end;
+  gap: 12px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .nameandate h3 {
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .nameandate span {
+  color: gray;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent p {
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-right: 10%;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 10px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers button {
+  width: 125px;
+  height: 31px;
+  border-radius: 5px;
+  background: #b6b6b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers button svg path {
+  fill: #131313;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers button span {
+  color: #131313;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers .exportBtn {
+  margin-left: auto;
+  width: 32px;
+  height: 31px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .members {
+  width: calc(45% - 32px);
+  height: 683px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .statics {
+  width: 60%;
+  height: 386px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .statics .lineChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .pieChart {
+  width: calc(40% - 32px);
+  height: 386px;
+}
+.theme-light .dashboard .wrapper .main .content .contentGrid .pieChart .pieChart {
+  width: 100% !important;
+}
+.theme-dark .dashboard {
+  width: 100%;
+}
+.theme-dark .dashboard .wrapper {
+  width: 100%;
+  height: 1773px;
+  display: flex;
+}
+.theme-dark .dashboard .wrapper .left {
+  min-width: 317px;
+  height: 100vh;
+  background-color: #242424;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.theme-dark .dashboard .wrapper .left .profile {
+  height: 319px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.theme-dark .dashboard .wrapper .left .profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.theme-dark .dashboard .wrapper .left .profile .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theme-dark .dashboard .wrapper .left .profile .text p {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .left .profile .text span {
+  color: #fff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .left .profile button {
+  border-radius: 31px;
+  background: #2c2c2c;
+  color: #fff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 6px 52px;
+}
+.theme-dark .dashboard .wrapper .left nav {
+  height: 100%;
+  overflow-y: scroll;
+}
+.theme-dark .dashboard .wrapper .left nav::-webkit-scrollbar {
+  display: none;
+}
+.theme-dark .dashboard .wrapper .left nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  gap: 20px;
+}
+.theme-dark .dashboard .wrapper .left nav ul .tab {
+  padding: 12px 10px 10px 62px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+.theme-dark .dashboard .wrapper .left nav ul .tab.active {
+  background: #2c2c2c;
+}
+.theme-dark .dashboard .wrapper .left nav ul .tab:hover {
+  background: #2c2c2c;
+}
+.theme-dark .dashboard .wrapper .main {
+  width: 100%;
+}
+.theme-dark .dashboard .wrapper .main .nav {
+  width: 100%;
+  height: 65px;
+  background: #242424;
+  box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 36px;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+}
+.theme-dark .dashboard .wrapper .main .nav .toggle {
+  width: 59px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #3c3c3c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+}
+.theme-dark .dashboard .wrapper .main .nav .notificationIcon path {
+  fill: #fff;
+}
+.theme-dark .dashboard .wrapper .main .content {
+  background: #1d1d1d;
+  width: 100%;
+  height: calc(100% - 65px);
+  padding: 53px 31px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentLeft {
+  color: #fff;
+  font-family: Inter;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentLeft h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentLeft p {
+  font-size: 24px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .days {
+  display: flex;
+  cursor: pointer;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .days .day {
+  border-radius: 10px 0px 0px 10px;
+  background: #2c2c2c;
+  padding: 12px 10px 7px 10px;
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .days .day.active, .theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .days .day:hover {
+  background: #2c2c2c;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .days .day:nth-child(2) {
+  border-radius: 0px 10px 10px 0px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .date input {
+  border-radius: 10px;
+  background: #2c2c2c;
+  width: 238px;
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 12px 20px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentTop .contentRight .date input.darkModeCalender::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid {
+  margin-top: 74px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .contentGridBox {
+  border-radius: 15px;
+  background: #242424;
+  overflow: hidden;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .contentGridBox .top {
+  height: 66px;
+  background: #2c2c2c;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .contentGridBox .top svg path {
+  fill: #fff;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .contentGridBox .top span {
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 5px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .contentGridBox .top .refresh {
+  margin-left: auto;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .contentGridBox .bottom {
+  width: 100% !important;
+  height: calc(100% - 66px) !important;
+  background-color: #2c2c2c !important;
+  padding: 10px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages {
+  width: 55%;
+  height: 683px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .catagoryTabs {
+  height: 41px;
+  display: flex;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .catagoryTabs .catagoryTab {
+  flex: 1;
+  background-color: #282828;
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage {
+  height: 85%;
+  overflow-y: scroll;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage::-webkit-scrollbar-thumb {
+  background: rgb(200, 200, 200);
+  border-radius: 10px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 18px;
+  gap: 10px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .nameandate {
+  display: flex;
+  align-self: flex-end;
+  gap: 12px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .nameandate h3 {
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .nameandate span {
+  color: rgb(200, 200, 200);
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent p {
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-right: 10%;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 10px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers button {
+  width: 125px;
+  height: 31px;
+  border-radius: 5px;
+  background: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers button svg path {
+  fill: #fff;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers button span {
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .messages .allMessage .msgContainer .textContent .btnContainers .exportBtn {
+  margin-left: auto;
+  width: 32px;
+  height: 31px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .members {
+  width: calc(45% - 32px);
+  height: 683px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .statics {
+  width: 60%;
+  height: 386px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .statics .lineChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .pieChart {
+  width: calc(40% - 32px);
+  height: 386px;
+}
+.theme-dark .dashboard .wrapper .main .content .contentGrid .pieChart .pieChart {
+  width: 100% !important;
+}
+
+.theme-light .contentGrid .addPatient {
+  width: 60%;
+  height: 455px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 45px 32px;
+  gap: 15px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormLeft input {
+  width: 100%;
+  height: 43px;
+  border-radius: 15px;
+  background: #f5f5f5;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight {
+  flex: 1;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender .sex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender .sex input {
+  width: 17px;
+  height: 17px;
+  background: #f5f5f5;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender .sex label {
+  color: #131313;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer {
+  width: 100%;
+  margin-top: 38px;
+  border-radius: 10px;
+  height: 118px;
+  overflow: hidden;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer .selectDateTop {
+  background: #f5f5f5;
+  height: 36px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 9px 17px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer .selectDate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer .selectDate select {
+  outline: none;
+  border: none;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: #fff;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .btnContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .btnContainer .addPatientBtn {
+  border-radius: 15px;
+  background: #17A1FA;
+  padding: 10px 52px;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-light .contentGrid .addPatient .newPatientForm .btnContainer .discard {
+  background: #FFF;
+  color: #2C2C2C;
+}
+.theme-light .contentGrid .history {
+  width: calc(40% - 32px);
+  height: 455px;
+}
+.theme-light .contentGrid .availablePatients {
+  width: 100%;
+  height: 501px;
+}
+.theme-light .contentGrid .availablePatients .top {
+  justify-content: space-between;
+}
+.theme-light .contentGrid .availablePatients .top .search {
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  border-radius: 35px;
+  padding: 8px 11px;
+  gap: 5px;
+}
+.theme-light .contentGrid .availablePatients .top .search input {
+  width: 100%;
+  background: transparent;
+  color: #131313;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-dark .contentGrid .addPatient {
+  width: 60%;
+  height: 455px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 45px 32px;
+  gap: 15px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormLeft input {
+  width: 100%;
+  height: 43px;
+  border-radius: 15px;
+  background: #e1e1e1;
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight {
+  flex: 1;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender .sex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender .sex input {
+  width: 17px;
+  height: 17px;
+  background: #5a5a5a;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .gender .sex label {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer {
+  width: 100%;
+  margin-top: 38px;
+  border-radius: 10px;
+  height: 118px;
+  overflow: hidden;
+  background: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer .selectDateTop {
+  background: #e1e1e1;
+  height: 36px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 9px 17px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer .selectDate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .newPatientFormRight .selectDateContainer .selectDate select {
+  outline: none;
+  border: none;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: #fff;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .btnContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .btnContainer .addPatientBtn {
+  border-radius: 15px;
+  background: #17A1FA;
+  padding: 10px 52px;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.theme-dark .contentGrid .addPatient .newPatientForm .btnContainer .discard {
+  background: #FFF;
+  color: #2C2C2C;
+}
+.theme-dark .contentGrid .history {
+  width: calc(40% - 32px);
+  height: 455px;
+}
+.theme-dark .contentGrid .availablePatients {
+  width: 100%;
+  height: 501px;
+}
+.theme-dark .contentGrid .availablePatients .top {
+  justify-content: space-between;
+}
+.theme-dark .contentGrid .availablePatients .top .search {
+  background: #5a5a5a;
+  display: flex;
+  align-items: center;
+  border-radius: 35px;
+  padding: 8px 11px;
+  gap: 5px;
+}
+.theme-dark .contentGrid .availablePatients .top .search input {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}/*# sourceMappingURL=style.css.map */

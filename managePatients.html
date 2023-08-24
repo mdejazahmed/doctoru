@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Doctoru | Manage Patients</title>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="wrapper">
+        <div class="left">
+          <div class="profile">
+            <img src="assets/profile.png" alt="" />
+            <div class="text">
+              <p>Dr. John Doe</p>
+              <span>Sr. Physician</span>
+            </div>
+            <button>My profile</button>
+          </div>
+          <hr />
+          <nav id="tabContainer">
+            <ul>
+              <a href="index.html"><li class="tab ">Dashboard</li></a>
+              <a href="managePatients.html"><li class="tab active">Manage Patients</li></a>
+              <a href="new_prescription.html"><li class="tab">New prescription</li></a>
+              <a href="treatment_records.html"><li class="tab">Treatment Records</li></a>
+              <a href="medical_certificates.html"><li class="tab">Medical Certificates</li></a>
+            </ul>
+          </nav>
+        </div>
+        <div class="main">
+          <div class="nav">
+            <div class="toggle" onclick="themeToggle()">
+              <!-- sun -->
+              <svg
+                id="sun"
+                class="sun"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.84757 1.56025L12.0617 0.0479084C12.2004 -0.0468418 12.391 0.00420975 12.4637 0.15565L13.6251 2.57249C13.674 2.67436 13.7804 2.73577 13.8931 2.72724L16.5668 2.52456C16.7343 2.51187 16.8738 2.65135 16.8611 2.81887L16.6584 5.49256C16.6499 5.60525 16.7113 5.71162 16.8132 5.76058L19.23 6.92193C19.3814 6.9947 19.4325 7.18523 19.3377 7.32394L17.8254 9.53809C17.7617 9.6314 17.7617 9.75426 17.8254 9.84757L19.3377 12.0617C19.4325 12.2004 19.3814 12.391 19.23 12.4637L16.8132 13.6251C16.7113 13.674 16.6499 13.7804 16.6584 13.8931L16.8611 16.5668C16.8738 16.7343 16.7343 16.8738 16.5668 16.8611L13.8931 16.6584C13.7804 16.6499 13.674 16.7113 13.6251 16.8132L12.4637 19.23C12.391 19.3814 12.2004 19.4325 12.0617 19.3377L9.84757 17.8254C9.75426 17.7617 9.6314 17.7617 9.53809 17.8254L7.32394 19.3377C7.18522 19.4325 6.99466 19.3814 6.92193 19.23L5.76058 16.8132C5.71162 16.7113 5.60525 16.6499 5.49256 16.6584L2.81887 16.8611C2.65135 16.8738 2.51187 16.7343 2.52456 16.5668L2.72724 13.8931C2.73577 13.7804 2.67436 13.674 2.57249 13.6251L0.155612 12.4637C0.00417164 12.391 -0.0468799 12.2004 0.0478703 12.0617L1.56022 9.84757C1.62395 9.75426 1.62395 9.6314 1.56022 9.53809L0.0479084 7.3239C-0.0468418 7.18519 0.00420974 6.99462 0.15565 6.92189L2.57249 5.76054C2.67436 5.71159 2.73577 5.60522 2.72724 5.49252L2.52456 2.81883C2.51187 2.65131 2.65135 2.51183 2.81887 2.52452L5.49256 2.7272C5.60525 2.73574 5.71162 2.67432 5.76058 2.57245L6.92193 0.155612C6.9947 0.00417166 7.18522 -0.0468799 7.32394 0.0478703L9.53809 1.56022C9.6314 1.62399 9.75422 1.62399 9.84757 1.56025Z"
+                  fill="#FFC639"
+                />
+                <path
+                  d="M9.69281 17.0999C13.7835 17.0999 17.0997 13.7837 17.0997 9.69299C17.0997 5.6023 13.7835 2.28613 9.69281 2.28613C5.60211 2.28613 2.28595 5.6023 2.28595 9.69299C2.28595 13.7837 5.60211 17.0999 9.69281 17.0999Z"
+                  fill="#FFE564"
+                />
+              </svg>
+              <!-- moon -->
+              <svg
+                id="moon"
+                class="moon d-none"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                  fill="#66757F"
+                />
+                <path
+                  d="M5.83336 6.66672C6.90725 6.66672 7.77781 5.79616 7.77781 4.72228C7.77781 3.64839 6.90725 2.77783 5.83336 2.77783C4.75947 2.77783 3.88892 3.64839 3.88892 4.72228C3.88892 5.79616 4.75947 6.66672 5.83336 6.66672Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M11.1111 10.5556C12.0316 10.5556 12.7778 9.80937 12.7778 8.8889C12.7778 7.96842 12.0316 7.22223 11.1111 7.22223C10.1907 7.22223 9.44446 7.96842 9.44446 8.8889C9.44446 9.80937 10.1907 10.5556 11.1111 10.5556Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M11.9445 17.2222C13.0184 17.2222 13.889 16.3516 13.889 15.2778C13.889 14.2039 13.0184 13.3333 11.9445 13.3333C10.8706 13.3333 10.0001 14.2039 10.0001 15.2778C10.0001 16.3516 10.8706 17.2222 11.9445 17.2222Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M11.6667 4.44451C12.2803 4.44451 12.7778 3.94705 12.7778 3.3334C12.7778 2.71975 12.2803 2.22229 11.6667 2.22229C11.053 2.22229 10.5555 2.71975 10.5555 3.3334C10.5555 3.94705 11.053 4.44451 11.6667 4.44451Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M1.66658 10.5556C1.9734 10.5556 2.22213 10.3069 2.22213 10C2.22213 9.69322 1.9734 9.44449 1.66658 9.44449C1.35975 9.44449 1.11102 9.69322 1.11102 10C1.11102 10.3069 1.35975 10.5556 1.66658 10.5556Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M16.6666 5.55554C16.9735 5.55554 17.2222 5.30681 17.2222 4.99998C17.2222 4.69316 16.9735 4.44443 16.6666 4.44443C16.3598 4.44443 16.1111 4.69316 16.1111 4.99998C16.1111 5.30681 16.3598 5.55554 16.6666 5.55554Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M8.33333 17.7778C8.64015 17.7778 8.88888 17.5291 8.88888 17.2222C8.88888 16.9154 8.64015 16.6667 8.33333 16.6667C8.0265 16.6667 7.77777 16.9154 7.77777 17.2222C7.77777 17.5291 8.0265 17.7778 8.33333 17.7778Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M17.7777 11.6667C18.3914 11.6667 18.8888 11.1692 18.8888 10.5556C18.8888 9.94195 18.3914 9.44449 17.7777 9.44449C17.1641 9.44449 16.6666 9.94195 16.6666 10.5556C16.6666 11.1692 17.1641 11.6667 17.7777 11.6667Z"
+                  fill="#5B6876"
+                />
+                <path
+                  d="M5.55551 13.8889C6.16916 13.8889 6.66662 13.3914 6.66662 12.7778C6.66662 12.1641 6.16916 11.6667 5.55551 11.6667C4.94186 11.6667 4.4444 12.1641 4.4444 12.7778C4.4444 13.3914 4.94186 13.8889 5.55551 13.8889Z"
+                  fill="#5B6876"
+                />
+              </svg>
+            </div>
+            <!-- notification -->
+            <svg
+              class="notificationIcon"
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23 9V18C23 19.1 22.1 20 21 20H7L3 24V6C3 4.9 3.9 4 5 4H15.1C15 4.3 15 4.7 15 5C15 7.8 17.2 10 20 10C21.1 10 22.2 9.6 23 9ZM17 5C17 6.7 18.3 8 20 8C21.7 8 23 6.7 23 5C23 3.3 21.7 2 20 2C18.3 2 17 3.3 17 5Z"
+                fill="#131313"
+              />
+            </svg>
+            <!-- bell -->
+            <svg
+              class="notificationIcon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 5.5C21 7.43 19.43 9 17.5 9C15.57 9 14 7.43 14 5.5C14 3.57 15.57 2 17.5 2C19.43 2 21 3.57 21 5.5ZM19 10.79C18.5 10.92 18 11 17.5 11C14.47 11 12 8.53 12 5.5C12 4.03 12.58 2.7 13.5 1.71C13.15 1.28 12.61 1 12 1C10.9 1 10 1.9 10 3V3.29C7.03 4.17 5 6.9 5 10V16L3 18V19H21V18L19 16V10.79ZM12 22C13.11 22 14 21.11 14 20H10C10 21.11 10.9 22 12 22Z"
+                fill="#131313"
+              />
+            </svg>
+          </div>
+          <div class="content">
+            <div class="contentTop">
+              <div class="contentLeft">
+                <h2>Manage Patients</h2>
+              </div>
+            </div>
+            <div class="contentGrid">
+              <div class="contentGridBox addPatient">
+                <div class="top">
+                  <span>Add new patient</span>
+                </div>
+                <form class="newPatientForm">
+                    <div class="newPatientFormLeft">
+                        <input type="text" placeholder="Full name*" required>
+                        <input type="text" placeholder="Contact*" required>
+                        <input type="email" placeholder="E-mail*" required>
+                    </div>
+                    <div class="newPatientFormRight">
+                        <div class="gender">
+                            <div class="sex">
+                                <input id="Male" type="radio" name="gender" checked>
+                                <label for="Male">Male</label>
+                            </div>
+                            <div class="sex">
+                                <input id="Female" type="radio" name="gender">
+                                <label for="Female">Female</label>
+                            </div>
+                            <div class="sex">
+                                <input id="Others" type="radio" name="gender">
+                                <label for="Others">Others</label>
+                            </div>
+                        </div>
+                        <div class="selectDateContainer">
+                          <div class="selectDateTop">Select date*</div>
+                          <div class="selectDate">
+                            <!-- day -->
+                            <select name="day" id="day" value="1" class="">
+                            </select>
+                            <!-- month -->
+                            <select name="month" id="month" value="1"></select>
+                            <!-- year -->
+                          <select name="year" id="year" value="2000"></select>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="btnContainer">
+                      <button class="addPatientBtn">Add patient</button>
+                      <button type="reset" class="addPatientBtn discard">Discard</button>
+                    </div>
+                </form>
+              </div>
+              <div class="contentGridBox history">
+                <div class="top">
+                  <span>History</span>
+                </div>
+              </div>
+              <div class="contentGridBox availablePatients">
+                <div class="top">
+                  <span>Available patients</span>
+                  <div class="search">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.5 3C11.2239 3 12.8772 3.68482 14.0962 4.90381C15.3152 6.12279 16 7.77609 16 9.5C16 11.11 15.41 12.59 14.44 13.73L14.71 14H15.5L20.5 19L19 20.5L14 15.5V14.71L13.73 14.44C12.59 15.41 11.11 16 9.5 16C7.77609 16 6.12279 15.3152 4.90381 14.0962C3.68482 12.8772 3 11.2239 3 9.5C3 7.77609 3.68482 6.12279 4.90381 4.90381C6.12279 3.68482 7.77609 3 9.5 3ZM9.5 5C7 5 5 7 5 9.5C5 12 7 14 9.5 14C12 14 14 12 14 9.5C14 7 12 5 9.5 5Z"
+                        fill="white"
+                      />
+                    </svg>
+                    <input type="search" placeholder="search patients"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="costum_date.js"></script>
+  </body>
+</html>

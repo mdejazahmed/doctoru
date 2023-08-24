@@ -1,0 +1,836 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&family=League+Spartan:wght@100;300;400;500;700&display=swap");
+
+$themes: (
+  light: (
+    textColor: #131313,
+    textSoft: gray,
+    bgColor: #ececec,
+    bgSoft: #e1e1e1,
+    bgSofter: #e0e0e0,
+    active: #ccc,
+    mode: rgba(23, 161, 250, 0.8),
+    cardTab: #b6b6b6,
+    search: #f5f5f5,
+    input: #f5f5f5,
+  ),
+  dark: (
+    textColor: #fff,
+    textSoft: rgb(200, 200, 200),
+    bgColor: #1d1d1d,
+    bgSoft: #242424,
+    bgSofter: #2c2c2c,
+    active: #2c2c2c,
+    mode: #3c3c3c,
+    cardTab: #282828,
+    search: #5a5a5a,
+    input: #e1e1e1,
+  ),
+);
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+input {
+  outline: none;
+  border: none;
+}
+
+.d-none {
+  visibility: hidden;
+}
+// login
+.login {
+  @include themify($themes) {
+    width: 100%;
+    background-color: themed("bgColor");
+    .wrapper {
+      width: 100%;
+      min-height: 100vh;
+      max-height: 1284px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 157px 84px;
+      .left {
+        flex: 1;
+        padding: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0px 2px 20px -2px rgba(0, 0, 0, 0.25);
+        background-color: themed("bgSoft");
+        h1 {
+          color: themed("textColor");
+          text-align: center;
+          font-family: Inter;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        p {
+          color: themed("textColor");
+          text-align: center;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        form {
+          border-radius: 15px;
+          background: themed("bgSofter");
+          box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.25);
+          display: flex;
+          flex-direction: column;
+          align-self: stretch;
+          padding: 20px;
+          margin-top: 23px;
+          p {
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 8px;
+          }
+          input {
+            border-radius: 15px;
+            background: #f2f2f2;
+            padding: 13px 289px 13px 18px;
+            margin-top: 10px;
+          }
+          button {
+            border-radius: 15px;
+            background: #17a1fa;
+            height: 50px;
+            color: #fff;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 30px;
+          }
+        }
+        .bottomPara {
+          text-align: center;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 29px;
+          &.bottomPara2 {
+            margin-top: 10px;
+          }
+          span {
+            color: #17a1fa;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        padding: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// signup
+.signup {
+  @include themify($themes) {
+    width: 100%;
+    background-color: themed("bgColor");
+    .wrapper {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 157px 84px;
+      .left {
+        flex: 1;
+        padding: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0px 2px 20px -2px rgba(0, 0, 0, 0.25);
+        background-color: themed("bgSoft");
+        h1 {
+          color: themed("textColor");
+          text-align: center;
+          font-family: Inter;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        p {
+          color: themed("textColor");
+          text-align: center;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        form {
+          border-radius: 15px;
+          background: themed("bgSofter");
+          box-shadow: 0px 1px 15px -4px rgba(0, 0, 0, 0.25);
+          display: flex;
+          flex-direction: column;
+          align-self: stretch;
+          padding: 20px;
+          margin-top: 23px;
+          p {
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 8px;
+          }
+          input {
+            border-radius: 15px;
+            background: #f2f2f2;
+            padding: 13px 289px 13px 18px;
+            margin-top: 10px;
+          }
+          h3 {
+            color: #ff5858;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 10px;
+          }
+          ul {
+            color: themed("textColor");
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-left: 20px;
+          }
+          button {
+            border-radius: 15px;
+            background: #17a1fa;
+            height: 50px;
+            color: #fff;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 30px;
+          }
+        }
+        .bottomPara {
+          text-align: center;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 29px;
+          &.bottomPara2 {
+            margin-top: 10px;
+          }
+          span {
+            color: #17a1fa;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        padding: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// dashboard
+.dashboard {
+  @include themify($themes) {
+    width: 100%;
+
+    .wrapper {
+      width: 100%;
+      height: 1773px;
+      display: flex;
+      .left {
+        min-width: 317px;
+        height: 100vh;
+        background-color: themed("bgSoft");
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        .profile {
+          height: 319px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              color: themed("textColor");
+              font-family: Inter;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+            span {
+              color: themed("textColor");
+              font-family: Inter;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+            }
+          }
+          button {
+            border-radius: 31px;
+            background: themed("active");
+            color: themed("textColor");
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 6px 52px;
+          }
+        }
+        nav {
+          height: 100%;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 17px;
+            gap: 20px;
+
+            .tab {
+              padding: 12px 10px 10px 62px;
+              color: themed("textColor");
+              font-family: Inter;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              cursor: pointer;
+              &.active {
+                background: themed("active");
+              }
+              &:hover {
+                background: themed("active");
+              }
+            }
+          }
+        }
+      }
+      .main {
+        width: 100%;
+        .nav {
+          width: 100%;
+          height: 65px;
+          background: themed("bgSoft");
+          box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.25);
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 0 36px;
+          gap: 20px;
+          position: sticky;
+          top: 0;
+
+          .toggle {
+            width: 59px;
+            border-radius: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: themed("mode");
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+            cursor: pointer;
+          }
+          .notificationIcon {
+            path {
+              fill: themed("textColor");
+            }
+          }
+        }
+        .content {
+          background: themed("bgColor");
+          width: 100%;
+          height: calc(100% - 65px);
+          padding: 53px 31px;
+          .contentTop {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .contentLeft {
+              color: themed("textColor");
+              font-family: Inter;
+              h2 {
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+              p {
+                font-size: 24px;
+              }
+            }
+            .contentRight {
+              display: flex;
+              align-items: center;
+              gap: 37px;
+              .days {
+                display: flex;
+                cursor: pointer;
+                .day {
+                  border-radius: 10px 0px 0px 10px;
+                  background: themed("bgSofter");
+                  padding: 12px 10px 7px 10px;
+                  color: themed("textColor");
+                  font-family: League Spartan;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                  &.active,
+                  &:hover {
+                    background: themed("active");
+                  }
+                  &:nth-child(2) {
+                    border-radius: 0px 10px 10px 0px;
+                  }
+                }
+              }
+              .date {
+                input {
+                  border-radius: 10px;
+                  background: themed("bgSofter");
+                  width: 238px;
+                  color: themed("textColor");
+                  font-family: League Spartan;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                  padding: 12px 20px;
+                  &.darkModeCalender::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                  }
+                }
+              }
+            }
+          }
+          .contentGrid {
+            margin-top: 74px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+
+            .contentGridBox {
+              border-radius: 15px;
+              background: themed("bgSoft");
+              overflow: hidden;
+              .top {
+                height: 66px;
+                background: themed("active");
+                display: flex;
+                align-items: center;
+                padding: 0 32px;
+                svg {
+                  path {
+                    fill: themed("textColor");
+                  }
+                }
+                span {
+                  color: themed("textColor");
+                  font-family: League Spartan;
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  margin-left: 5px;
+                }
+                .refresh {
+                  margin-left: auto;
+                }
+              }
+              .bottom {
+                width: 100% !important;
+                height: calc(100% - 66px) !important;
+                background-color: themed("bgSofter") !important;
+                padding: 10px;
+              }
+            }
+            .messages {
+              width: 55%;
+              height: 683px;
+              .catagoryTabs {
+                height: 41px;
+                display: flex;
+                .catagoryTab {
+                  flex: 1;
+                  background-color: themed("cardTab");
+                  color: themed("textColor");
+                  font-family: League Spartan;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: normal;
+                }
+              }
+              .allMessage {
+                height: 85%;
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                  width: 5px;
+                  cursor: pointer;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background: themed("textSoft");
+                  border-radius: 10px;
+                }
+                .msgContainer {
+                  width: 100%;
+                  display: flex;
+                  align-items: flex-start;
+                  padding: 18px;
+                  gap: 10px;
+
+                  img {
+                    width: 43px;
+                    height: 43px;
+                    border-radius: 50%;
+                  }
+                  .textContent {
+                    .nameandate {
+                      display: flex;
+                      align-self: flex-end;
+                      gap: 12px;
+                      h3 {
+                        color: themed("textColor");
+                        font-family: League Spartan;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                      }
+                      span {
+                        color: themed("textSoft");
+                        font-family: League Spartan;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                      }
+                    }
+                    p {
+                      color: themed("textColor");
+                      font-family: League Spartan;
+                      font-size: 15px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: normal;
+                      padding-right: 10%;
+                    }
+                    .btnContainers {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      gap: 2px;
+                      margin-top: 10px;
+                      button {
+                        width: 125px;
+                        height: 31px;
+                        border-radius: 5px;
+                        background: themed("cardTab");
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                        svg {
+                          path {
+                            fill: themed("textColor");
+                          }
+                        }
+                        span {
+                          color: themed("textColor");
+                          font-family: League Spartan;
+                          font-size: 15px;
+                          font-style: normal;
+                          font-weight: 300;
+                          line-height: normal;
+                        }
+                      }
+                      .exportBtn {
+                        margin-left: auto;
+                        width: 32px;
+                        height: 31px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .members {
+              width: calc(45% - 32px);
+              height: 683px;
+            }
+            .statics {
+              width: 60%;
+              height: 386px;
+              .lineChart {
+                width: 100% !important;
+                height: 100% !important;
+              }
+            }
+            .pieChart {
+              width: calc(40% - 32px);
+              height: 386px;
+              .pieChart {
+                width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Manage Patients
+.contentGrid {
+  @include themify($themes) {
+    .addPatient {
+      width: 60%;
+      height: 455px;
+      .newPatientForm {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 45px 32px;
+        gap: 15px;
+        .newPatientFormLeft {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 29px;
+
+          input {
+            width: 100%;
+            height: 43px;
+            border-radius: 15px;
+            background: themed("input");
+            color: #000;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 15px;
+          }
+        }
+        .newPatientFormRight {
+          flex: 1;
+          .gender {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+            .sex {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              input {
+                width: 17px;
+                height: 17px;
+                background: themed("search");
+              }
+              label {
+                color: themed("textColor");
+                text-align: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+            }
+          }
+          .selectDateContainer {
+            width: 100%;
+            margin-top: 38px;
+            border-radius: 10px;
+            height: 118px;
+            overflow: hidden;
+            background: themed("active");
+            display: flex;
+            flex-direction: column;
+            .selectDateTop {
+              background: themed("input");
+              height: 36px;
+              color: rgba(0, 0, 0, 0.5);
+              font-family: Inter;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              padding: 9px 17px;
+            }
+            .selectDate {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 24px;
+              select {
+                outline: none;
+                border: none;
+                height: 42px;
+                padding: 0 12px;
+                border-radius: 10px;
+                background: #fff;
+              }
+            }
+          }
+
+        }
+        .btnContainer {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .addPatientBtn{
+            border-radius: 15px;
+background: #17A1FA;
+padding: 10px 52px;
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+          }
+          .discard{
+            background: #FFF;
+            color: #2C2C2C;
+          }
+        }
+      }
+    }
+    .history {
+      width: calc(40% - 32px);
+      height: 455px;
+    }
+    .availablePatients {
+      width: 100%;
+      height: 501px;
+      .top {
+        justify-content: space-between;
+        .search {
+          background: themed("search");
+          display: flex;
+          align-items: center;
+          border-radius: 35px;
+          padding: 8px 11px;
+          gap: 5px;
+          svg {
+            path {
+              fill: themed("textColors");
+            }
+          }
+          input {
+            width: 100%;
+            background: transparent;
+            color: themed("textColor");
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+}
